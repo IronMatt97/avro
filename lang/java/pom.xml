@@ -67,6 +67,8 @@
     <file-management.version>3.0.0</file-management.version>
     <javacc-plugin.version>3.0.3</javacc-plugin.version>
     <javacc.version>7.0.11</javacc.version>
+    <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
+    <aggregate.report.dir>jacoco-reports/target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
   </properties>
 
   <modules>
@@ -86,6 +88,7 @@
     <module>grpc</module>
     <module>integration-test</module>
     <module>perf</module>
+    <module>jacoco-reports</module>
   </modules>
 
   <build>
@@ -158,34 +161,19 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <configuration>
             <includes>
-              <!-- Avro naming convention for JUnit tests -->
               <include>**/Test**</include>
+              <include>**/*test.java</include>
             </includes>
-            <excludes>
-              <!-- A few innner classes are not to be tested -->
-              <exclude>**/*$*</exclude>
-              <!-- exclude the generated classes under apache.avro.test, some of
-                these match **/Test** and are not JUnit tests -->
-              <exclude>**/apache/avro/test/**</exclude>
-            </excludes>
+
             <enableAssertions>false</enableAssertions>
             <trimStackTrace>false</trimStackTrace>
             <runOrder>random</runOrder>
             <parallel>all</parallel>
             <useUnlimitedThreads>true</useUnlimitedThreads>
-            <!--<perCoreThreadCount>true</perCoreThreadCount>-->
-
-            <!-- TestSpecificCompiler instantiates a Java compiler to test output results,
-                 this does not work with a manifest-only-jar to set the classpath for the javac.
-                 This may cause problems on some platforms.
-                 See https://maven.apache.org/plugins/maven-surefire-plugin/examples/class-loading.html
-                 for more information. -->
             <useManifestOnlyJar>false</useManifestOnlyJar>
-            <!-- configures unit test standard error and standard out to go to a file per test
-                 rather than the console. -->
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
             <failIfNoTests>false</failIfNoTests>
-            <argLine>-Xmx1000m</argLine>
+            <!--argLine>-Xmx1000m</argLine-->
           </configuration>
         </plugin>
         <plugin>
@@ -237,6 +225,37 @@
     </pluginManagement>
     <plugins>
       <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+             <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <goals>
+             <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+        </plugin>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+        <configuration>
+          <redirectTestOutputToFile>true</redirectTestOutputToFile>
+          <forkCount>1</forkCount>
+          <reuseForks>false</reuseForks>
+          <forkedProcessTimeoutInSeconds>1800</forkedProcessTimeoutInSeconds>
+          <rerunFailingTestsCount>0</rerunFailingTestsCount>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
         <version>${bundle-plugin-version}</version>
@@ -264,58 +283,6 @@
             <phase>process-classes</phase>
             <goals>
               <goal>manifest</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <configuration>
-          <consoleOutput>true</consoleOutput>
-          <configLocation>checkstyle.xml</configLocation>
-          <suppressionsLocation>suppressions.xml</suppressionsLocation>
-        </configuration>
-        <!-- Runs by default in the verify phase  (mvn verify or later in the build cycle)
-             the 'check' goal will fail the build if it does not pass.  "mvn checkstyle:check"
-             will do this alone, or "mvn checkstyle:checkstyle" will report but not break  -->
-        <executions>
-          <execution>
-            <id>checkstyle-check</id>
-            <phase>test</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>com.diffplug.spotless</groupId>
-        <artifactId>spotless-maven-plugin</artifactId>
-        <configuration>
-          <java>
-            <eclipse>
-              <!-- Avro uses Sun's java code style conventions with 2 spaces, this is a modified version of
-                   the eclipse formatter -->
-              <file>${main.basedir}/lang/java/eclipse-java-formatter.xml</file>
-              <version>4.19.0</version>
-            </eclipse>
-            <!-- Temporarily disabled for JDK 16+ builds -->
-            <!--<removeUnusedImports/>-->
-            <replaceRegex>
-              <name>Remove wildcard imports</name>
-              <searchRegex>import\s+[^\*\s]+\*;(\r\n|\r|\n)</searchRegex>
-              <replacement>$1</replacement>
-            </replaceRegex>
-          </java>
-        </configuration>
-        <executions>
-          <execution>
-            <!-- Runs in compile phase to fail fast in case of formatting issues.-->
-            <id>spotless-check</id>
-            <phase>compile</phase>
-            <goals>
-              <goal>check</goal>
             </goals>
           </execution>
         </executions>

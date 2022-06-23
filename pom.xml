@@ -49,12 +49,11 @@
     <antrun-plugin.version>3.0.0</antrun-plugin.version>
     <checkstyle-plugin.version>3.1.2</checkstyle-plugin.version>
     <checkstyle.version>8.42</checkstyle.version>
-    <enforcer-plugin.version>3.0.0-M3</enforcer-plugin.version>
     <maven-plugin-plugin.version>3.6.1</maven-plugin-plugin.version>
     <plugin-tools-javadoc.version>3.5</plugin-tools-javadoc.version>
-    <extra-enforcer-rules.version>1.3</extra-enforcer-rules.version>
     <spotless-maven-plugin.version>2.19.1</spotless-maven-plugin.version>
-    <surefire.version>3.0.0-M5</surefire.version>
+    <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
+    <surefire.version>3.0.0-M6</surefire.version>
   </properties>
 
   <modules>
@@ -114,91 +113,6 @@
       </plugins>
     </pluginManagement>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>${enforcer-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>default-cli</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <enforceBytecodeVersion>
-                  <maxJdkVersion>1.8</maxJdkVersion>
-                  <!--
-                    Multi release jars that are Java 8 compatible should pass,
-                    but the extra-enforcer-plugin does not detect them
-                    correctly so we should ignore them explicitly.
-                    -->
-                  <ignoreClasses>
-                    <ignoreClass>module-info</ignoreClass>
-                  </ignoreClasses>
-                  <excludes>
-                    <!--
-                      Supplied by the user JDK and compiled with matching
-                      version. Is not shaded, so safe to ignore.
-                    -->
-                    <exclude>jdk.tools:jdk.tools</exclude>
-                  </excludes>
-                </enforceBytecodeVersion>
-                <requireJavaVersion>
-                  <version>[1.8,)</version>
-                </requireJavaVersion>
-                <requireMavenVersion>
-                  <version>[3.8.1,)</version>
-                </requireMavenVersion>
-              </rules>
-            </configuration>
-          </execution>
-          <execution>
-            <id>enforce</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireProperty>
-                  <property>project.version</property>
-                  <regex>${env.VERSION}</regex>
-                  <regexMessage>*****!!!!! Version of project must be ${env.VERSION} !!!!!*****</regexMessage>
-                </requireProperty>
-                <enforceBytecodeVersion>
-                  <maxJdkVersion>1.8</maxJdkVersion>
-                </enforceBytecodeVersion>
-                <requireJavaVersion>
-                  <version>[1.8,)</version>
-                </requireJavaVersion>
-              </rules>
-            </configuration>
-          </execution>
-          <execution>
-            <id>enforce-banned-dependencies</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <bannedDependencies>
-                  <excludes>
-                    <exclude>com.google.code.findbugs:*</exclude>  <!-- GPL -->
-                    <exclude>org.hamcrest:hamcrest-all</exclude>
-                  </excludes>
-                </bannedDependencies>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
-        <dependencies>
-          <dependency>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>extra-enforcer-rules</artifactId>
-            <version>${extra-enforcer-rules.version}</version>
-          </dependency>
-        </dependencies>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
@@ -280,7 +194,7 @@
     <profile>
       <id>rat</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <build>
         <plugins>
