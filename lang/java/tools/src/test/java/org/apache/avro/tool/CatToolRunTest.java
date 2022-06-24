@@ -1,6 +1,7 @@
 package org.apache.avro.tool;
 
 import org.apache.avro.Schema;
+import org.apache.avro.SchemaBuilder;
 import org.apache.avro.file.CodecFactory;
 import org.apache.avro.file.DataFileWriter;
 import org.apache.avro.generic.GenericData;
@@ -8,7 +9,9 @@ import org.apache.avro.generic.GenericDatumWriter;
 import org.apache.avro.generic.GenericRecord;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
+import org.junit.runner.JUnitCore;
 import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
@@ -22,14 +25,14 @@ import java.util.*;
 
 
 @RunWith(Parameterized.class)
-public class CatTool_run_test {
+public class CatToolRunTest {
   InputStream in;
   PrintStream out;
   PrintStream err;
   List<String> args;
   Object expectedParam;
 
-  public CatTool_run_test(TestInput t){
+  public CatToolRunTest(TestInput t){
     this.in = t.in;
     this. out = t.out;
     this.err = t.err;
@@ -119,8 +122,10 @@ public class CatTool_run_test {
     if (!Files.exists(Paths.get("tmp.avro"))) {
       File tmp = new File("tmp.avro");
       tmp.createNewFile();
-      Schema schema = new Schema.Parser().parse("{\"type\":\"record\", " + "\"name\":\"myRecord\", "
-        + "\"fields\":[ " + "{\"name\":\"value\",\"type\":\"int\"} " + "]}");
+      //Schema schema = new Schema.Parser().parse("{\"type\":\"record\", " + "\"name\":\"myRecord\", "
+        //+ "\"fields\":[ " + "{\"name\":\"value\",\"type\":\"int\"} " + "]}");
+      Schema schema;
+      schema = SchemaBuilder.record("myRecord").fields().name("value").type().intType().noDefault().endRecord();
       DataFileWriter<Object> writer = new DataFileWriter<>(new GenericDatumWriter<>(schema));
       writer.setMeta("METADATA_KEY", "METADATA_VALUE");
       writer.setCodec(CodecFactory.snappyCodec());
@@ -152,8 +157,9 @@ public class CatTool_run_test {
   }
 
   @Test
-  public void run_test() throws Exception {
+  public void testRun() throws Exception {
     int res = new CatTool().run(in,out,err,args);
+
     Assert.assertEquals(expectedParam, res);
   }
 

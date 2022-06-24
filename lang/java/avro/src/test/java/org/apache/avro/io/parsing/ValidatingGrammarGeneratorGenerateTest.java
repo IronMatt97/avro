@@ -9,17 +9,16 @@ import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.mockito.Mockito;
 
 import java.util.*;
 
 @RunWith(Parameterized.class)
-public class ValidatingGrammarGenerator_generate_test {
+public class ValidatingGrammarGeneratorGenerateTest {
   Schema sc;
   Map<ValidatingGrammarGenerator.LitS, Symbol> seen;
   Object expectedParam;
 
-  public ValidatingGrammarGenerator_generate_test(TestInput t){
+  public ValidatingGrammarGeneratorGenerateTest(TestInput t){
     this.sc = t.sc;
     this.seen = t.seen;
     this.expectedParam = t.expectedParam;
@@ -107,7 +106,7 @@ public class ValidatingGrammarGenerator_generate_test {
   public ExpectedException thrown = ExpectedException.none();
 
   @Test
-  public void generate_test() {
+  public void testGenerate() {
 
     if (sc == null)
       thrown.expect(RuntimeException.class);
@@ -127,7 +126,7 @@ public class ValidatingGrammarGenerator_generate_test {
   }
 
   @Test
-  public void generate2_test(){
+  public void testGenerate2(){
     ValidatingGrammarGenerator v = new ValidatingGrammarGenerator();
     Symbol s = v.generate(sc);
     Assert.assertNotNull(s);

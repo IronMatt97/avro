@@ -15,11 +15,11 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.*;
 
 @RunWith(Parameterized.class)
-public class GenericData_getDefaultValue_test {
+public class GenericDataGetDefaultValueTest {
   Field field;
   Object expectedParam;
 
-  public GenericData_getDefaultValue_test(TestInput t){
+  public GenericDataGetDefaultValueTest(TestInput t){
     this.field = t.field;
     this.expectedParam = t.expectedParam;
   }
@@ -78,7 +78,7 @@ public class GenericData_getDefaultValue_test {
   public ExpectedException thrown = ExpectedException.none();
 
   @Test
-  public void getDefaultValue_test() {
+  public void testGetDefaultValue() {
 
     if (field.pos() == -1)
       thrown.expect(AvroMissingFieldException.class);

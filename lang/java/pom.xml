@@ -43,6 +43,7 @@
     <jetty.version>9.4.46.v20220331</jetty.version>
     <jopt-simple.version>5.0.4</jopt-simple.version>
     <junit.version>4.13.2</junit.version>
+    <junit5.version>5.8.2</junit5.version>
     <netty.version>4.1.75.Final</netty.version>
     <protobuf.version>3.20.1</protobuf.version>
     <thrift.version>0.16.0</thrift.version>
@@ -163,6 +164,7 @@
             <includes>
               <include>**/Test**</include>
               <include>**/*test.java</include>
+              <include>**/*Test.java</include>
             </includes>
 
             <enableAssertions>false</enableAssertions>
@@ -447,6 +449,16 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit5.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <dependency>
         <groupId>com.fasterxml.jackson</groupId>
         <artifactId>jackson-bom</artifactId>
         <version>${jackson-bom.version}</version>
@@ -559,9 +571,20 @@
     will inherit these dependencies directly, and can opt out if necessary with <excludes> -->
   <dependencies>
     <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit5.version}</version>
+      </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency><!-- Needed by junit -->
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <version>1.3</version>
       <scope>test</scope>
     </dependency>
     <dependency>

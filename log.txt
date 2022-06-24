@@ -1,0 +1,1468 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Apache Avro Toplevel                                               [pom]
+[[1;34mINFO[m] Apache Avro Java                                                   [pom]
+[[1;34mINFO[m] Apache Avro                                                     [bundle]
+[[1;34mINFO[m] Apache Avro Android Compatibility                                  [jar]
+[[1;34mINFO[m] Apache Avro Compiler                                            [bundle]
+[[1;34mINFO[m] Apache Avro Maven Plugin                                  [maven-plugin]
+[[1;34mINFO[m] Apache Avro IPC                                                 [bundle]
+[[1;34mINFO[m] Apache Avro IPC Jetty                                           [bundle]
+[[1;34mINFO[m] Apache Avro IPC Netty                                           [bundle]
+[[1;34mINFO[m] Trevni Java                                                        [pom]
+[[1;34mINFO[m] Trevni Java Core                                                   [jar]
+[[1;34mINFO[m] Apache Avro Mapred API                                          [bundle]
+[[1;34mINFO[m] Trevni Java Avro                                                   [jar]
+[[1;34mINFO[m] Trevni Specification                                               [pom]
+[[1;34mINFO[m] Apache Avro Tools                                                  [jar]
+[[1;34mINFO[m] Apache Avro Protobuf Compatibility                              [bundle]
+[[1;34mINFO[m] Apache Avro Thrift Compatibility                                [bundle]
+[[1;34mINFO[m] Apache Avro Maven Archetypes                                       [pom]
+[[1;34mINFO[m] Apache Avro Maven Service Archetype                    [maven-archetype]
+[[1;34mINFO[m] Apache Avro gRPC                                                [bundle]
+[[1;34mINFO[m] Avro Integration Tests                                             [pom]
+[[1;34mINFO[m] Apache Avro Codegen Test dependencies                              [jar]
+[[1;34mINFO[m] Apache Avro Codegen Test                                           [jar]
+[[1;34mINFO[m] Apache Avro Performance Test Suite                                 [jar]
+[[1;34mINFO[m] jacoco-reports                                                     [jar]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.apache.avro:avro-toplevel[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Toplevel 1.12.0-SNAPSHOT                     [1/25][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-toplevel[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-toplevel[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-toplevel[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.avro:avro-parent[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Java 1.12.0-SNAPSHOT                         [2/25][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-parent[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-parent[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-parent[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-parent[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type pom - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------< [0;36morg.apache.avro:avro[0;1m >------------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro 1.12.0-SNAPSHOT                              [3/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 166 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/target/classes
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/main/java/org/apache/avro/reflect/FieldAccessUnsafe.java:[27,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/main/java/org/apache/avro/Protocol.java:[598,28] createRecord(java.util.List<org.apache.avro.Schema.Field>) in org.apache.avro.Schema has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/main/java/org/apache/avro/reflect/ReflectData.java:[946,28] createRecord(java.util.List<org.apache.avro.Schema.Field>) in org.apache.avro.Schema has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/main/java/org/apache/avro/reflect/FieldAccessUnsafe.java:[32,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/main/java/org/apache/avro/reflect/FieldAccessUnsafe.java:[36,25] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/main/java/org/apache/avro/reflect/FieldAccessUnsafe.java:[38,17] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/main/java/org/apache/avro/Schema.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/main/java/org/apache/avro/Schema.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 6 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 13 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/target/test-classes
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/test/java/org/apache/avro/generic/GenericData_getDefaultValue_test.java:[78,54] none() in org.junit.rules.ExpectedException has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/src/test/java/org/apache/avro/io/parsing/ValidatingGrammarGenerator_generate_test.java:[107,54] none() in org.junit.rules.ExpectedException has been deprecated
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3767079047827
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.avro.io.parsing.[1mValidatingGrammarGenerator_generate_test[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m32[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 s - in org.apache.avro.io.parsing.[1mValidatingGrammarGenerator_generate_test[m
+[[1;34mINFO[m] Running org.apache.avro.generic.[1mGenericData_getDefaultValue_test[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s - in org.apache.avro.generic.[1mGenericData_getDefaultValue_test[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 36, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(test-with-custom-coders)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3769555808745
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.avro.generic.[1mGenericData_getDefaultValue_test[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 s - in org.apache.avro.generic.[1mGenericData_getDefaultValue_test[m
+[[1;34mINFO[m] Running org.apache.avro.io.parsing.[1mValidatingGrammarGenerator_generate_test[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m32[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s - in org.apache.avro.io.parsing.[1mValidatingGrammarGenerator_generate_test[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 36, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(test-with-fast-reader)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3772214220191
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.avro.generic.[1mGenericData_getDefaultValue_test[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 s - in org.apache.avro.generic.[1mGenericData_getDefaultValue_test[m
+[[1;34mINFO[m] Running org.apache.avro.io.parsing.[1mValidatingGrammarGenerator_generate_test[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m32[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s - in org.apache.avro.io.parsing.[1mValidatingGrammarGenerator_generate_test[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 36, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mpitest-maven:1.5.2:mutationCoverage[m [1m(pit-report)[m @ [36mavro[0;1m ---[m
+[[1;34mINFO[m] Found plugin : Default csv report plugin
+[[1;34mINFO[m] Found plugin : Default xml report plugin
+[[1;34mINFO[m] Found plugin : Default html report plugin
+[[1;34mINFO[m] Found plugin : Static initializer code detector plugin
+[[1;34mINFO[m] Found plugin : Static initializer filter plugin
+[[1;34mINFO[m] Found plugin : Excluded annotations plugin
+[[1;34mINFO[m] Found plugin : Try with resources filter
+[[1;34mINFO[m] Found plugin : Inlined finally block filter plugin
+[[1;34mINFO[m] Found plugin : Implicit null check filter
+[[1;34mINFO[m] Found plugin : Method reference null check filter
+[[1;34mINFO[m] Found plugin : For each loop filter
+[[1;34mINFO[m] Found plugin : Enum constructor filter
+[[1;34mINFO[m] Found plugin : Logging calls filter
+[[1;34mINFO[m] Found plugin : Infinite for loop filter
+[[1;34mINFO[m] Found plugin : Long running iterator loop filter
+[[1;34mINFO[m] Found plugin : For loop counter filter
+[[1;34mINFO[m] Found plugin : Kotlin junk mutations filter
+[[1;34mINFO[m] Found plugin : Max mutations per class limit
+[[1;34mINFO[m] Found plugin : Equals shortcut equivalent mutant filter
+[[1;34mINFO[m] Found plugin : Trivial return vals equivalence filter
+[[1;34mINFO[m] Found plugin : Mutant export plugin
+[[1;34mINFO[m] Found shared classpath plugin : Default mutation engine
+[[1;34mINFO[m] Found shared classpath plugin : JUnit 5 test framework support
+[[1;34mINFO[m] Found shared classpath plugin : JUnit plugin
+[[1;34mINFO[m] Found shared classpath plugin : TestNG plugin
+[[1;34mINFO[m] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[[1;34mINFO[m] Adding org.pitest:pitest to SUT classpath
+[[1;34mINFO[m] Mutating from /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/target/classes
+/-================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.BooleanTrueReturnValsMutator
+>> Generated 51 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 51 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.EmptyObjectReturnValsMutator
+>> Generated 17 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 17 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 12 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 12 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 7 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 7 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NullReturnValsMutator
+>> Generated 75 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 75 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 19 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 19 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.InvertNegsMutator
+>> Generated 1 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 6 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 6 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.BooleanFalseReturnValsMutator
+>> Generated 37 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 37 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 131 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 131 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.PrimitiveReturnsMutator
+>> Generated 17 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 17 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : < 1 second
+--------------------------------------------------------------------------------
+> Total  : < 1 second
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Generated 373 mutations Killed 0 (0%)
+>> Ran 0 tests (0 tests per mutation)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.avro:avro-android[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Android Compatibility 1.12.0-SNAPSHOT        [4/25][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/android/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/android/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/android/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 2 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/android/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-android[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type jar - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/android/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-android[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3775245006348
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.apache.avro:avro-compiler[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Compiler 1.12.0-SNAPSHOT                     [5/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjavacc-maven-plugin:3.0.3:javacc[m [1m(javacc)[m @ [36mavro-compiler[0;1m ---[m
+Java Compiler Compiler Version 7.0.11 (Parser Generator)
+(type "javacc" with no arguments for help)
+Reading from file /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/src/main/javacc/org/apache/avro/compiler/idl/idl.jj . . .
+Note: UNICODE_INPUT option is specified. Please make sure you create the parser/lexer using a Reader with the correct character encoding.
+File "TokenMgrError.java" does not exist.  Will create one.
+File "ParseException.java" does not exist.  Will create one.
+File "Token.java" does not exist.  Will create one.
+File "JavaCharStream.java" does not exist.  Will create one.
+Parser generated successfully.
+[[1;34mINFO[m] Processed 1 grammar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.3.0:add-source[m [1m(add-source)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Source directory: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/target/generated-sources/javacc added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 18 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/target/classes
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/src/main/java/org/apache/avro/compiler/schema/Schemas.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/src/main/java/org/apache/avro/compiler/schema/Schemas.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:3.0.0:exec[m [1m(default)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.3.0:add-test-source[m [1m(add-test-source)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Test Source directory: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/target/generated-test-sources/javacc added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.2.0:test-jar[m [1m(prepare-test-jar)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Building jar: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/target/test-classes/putOnClassPath-test-resource.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] Copying 39 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 2 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/compiler/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-compiler[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3776967238604
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36morg.apache.avro:avro-maven-plugin[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Maven Plugin 1.12.0-SNAPSHOT                 [6/25][m
+[[1;34mINFO[m] [1m----------------------------[ maven-plugin ]----------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/maven-plugin/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/maven-plugin/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-plugin-plugin:3.6.1:helpmojo[m [1m(generated-helpmojo)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to read mojo source files.
+[[1;34mINFO[m] java-javadoc mojo extractor found 4 mojo descriptors.
+[[1;34mINFO[m] bsh mojo extractor found 0 mojo descriptor.
+[[1;34mINFO[m] ant mojo extractor found 0 mojo descriptor.
+[[1;34mINFO[m] java-annotations mojo extractor found 0 mojo descriptor.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 6 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/maven-plugin/target/classes
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/maven-plugin/src/main/java/org/apache/avro/mojo/AbstractAvroMojo.java: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/maven-plugin/src/main/java/org/apache/avro/mojo/AbstractAvroMojo.java uses unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/maven-plugin/src/main/java/org/apache/avro/mojo/AbstractAvroMojo.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-plugin-plugin:3.6.1:descriptor[m [1m(default-descriptor)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to read mojo source files.
+[[1;34mINFO[m] java-javadoc mojo extractor found 5 mojo descriptors.
+[[1;34mINFO[m] bsh mojo extractor found 0 mojo descriptor.
+[[1;34mINFO[m] ant mojo extractor found 0 mojo descriptor.
+[[1;34mINFO[m] java-annotations mojo extractor found 0 mojo descriptor.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type maven-plugin - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 11 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 2 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/maven-plugin/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3778481087919
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.apache.avro:avro-ipc[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro IPC 1.12.0-SNAPSHOT                          [7/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:schema[m [1m(schemas)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:protocol[m [1m(schemas)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:idl-protocol[m [1m(schemas)[m @ [36mavro-ipc[0;1m ---[m
+[[1;33mWARNING[m] Found documentation comment at line 19, column 1. Ignoring previous one at line 1, column 1: "Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[[1;33mWARNING[m] Found documentation comment at line 19, column 1. Ignoring previous one at line 1, column 1: "Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[[1;33mWARNING[m] Found documentation comment at line 19, column 1. Ignoring previous one at line 1, column 1: "Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[[1;33mWARNING[m] Found documentation comment at line 19, column 1. Ignoring previous one at line 1, column 1: "Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.3.0:add-source[m [1m(add-source)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Source directory: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc/target/generated-sources/java added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 9 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 34 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc/target/classes
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc/src/main/java/org/apache/avro/ipc/SaslSocketServer.java:[39,39] org.apache.avro.ipc.SocketServer in org.apache.avro.ipc has been deprecated
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.3.0:add-test-source[m [1m(add-test-source)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Test Source directory: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc/target/generated-test-sources/java added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 80 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-ipc[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3780470963987
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.apache.avro:avro-ipc-jetty[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro IPC Jetty 1.12.0-SNAPSHOT                    [8/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-jetty/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-jetty/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-jetty/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 3 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-jetty/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-jetty/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-jetty/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-ipc-jetty[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3780842856556
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.apache.avro:avro-ipc-netty[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro IPC Netty 1.12.0-SNAPSHOT                    [9/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-netty/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-netty/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-netty/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 3 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-netty/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/ipc-netty/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-ipc-netty[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3781072042447
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.avro:trevni-java[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Trevni Java 1.12.0-SNAPSHOT                             [10/25][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mtrevni-java[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mtrevni-java[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mtrevni-java[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mtrevni-java[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mtrevni-java[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type pom - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.avro:trevni-core[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Trevni Java Core 1.12.0-SNAPSHOT                        [11/25][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/core/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/core/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/core/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 25 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/core/target/classes
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/core/src/main/java/org/apache/trevni/MetaData.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/core/src/main/java/org/apache/trevni/MetaData.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mtrevni-core[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type jar - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/core/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mtrevni-core[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3781200981907
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.avro:avro-mapred[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Mapred API 1.12.0-SNAPSHOT                  [12/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-banned-dependencies)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:schema[m [1m(default)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:schema[m [1m(test-schemas)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:protocol[m [1m(test-schemas)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:protocol[m [1m(mapred-schema)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.3.0:add-source[m [1m(add-source)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Source directory: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/target/generated-sources/java added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 75 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/target/classes
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapred/tether/TetheredProcess.java:[37,35] org.apache.hadoop.filecache.DistributedCache in org.apache.hadoop.filecache has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapred/tether/TetherJob.java:[31,35] org.apache.hadoop.filecache.DistributedCache in org.apache.hadoop.filecache has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapred/tether/TetheredProcess.java:[157,27] org.apache.hadoop.filecache.DistributedCache in org.apache.hadoop.filecache has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapred/tether/TetheredProcess.java:[157,43] getLocalCacheFiles(org.apache.hadoop.conf.Configuration) in org.apache.hadoop.mapreduce.filecache.DistributedCache has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapred/tether/TetheredProcess.java:[159,23] org.apache.hadoop.filecache.DistributedCache in org.apache.hadoop.filecache has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapred/tether/TetheredProcess.java:[159,39] getCacheFiles(org.apache.hadoop.conf.Configuration) in org.apache.hadoop.mapreduce.filecache.DistributedCache has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapred/SequenceFileReader.java:[68,10] Reader(org.apache.hadoop.fs.FileSystem,org.apache.hadoop.fs.Path,org.apache.hadoop.conf.Configuration) in org.apache.hadoop.io.SequenceFile.Reader has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/hadoop/io/AvroSequenceFile.java:[107,24] createWriter(org.apache.hadoop.fs.FileSystem,org.apache.hadoop.conf.Configuration,org.apache.hadoop.fs.Path,java.lang.Class,java.lang.Class,int,short,long,org.apache.hadoop.io.SequenceFile.CompressionType,org.apache.hadoop.io.compress.CompressionCodec,org.apache.hadoop.util.Progressable,org.apache.hadoop.io.SequenceFile.Metadata) in org.apache.hadoop.io.SequenceFile has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/hadoop/io/AvroSequenceFile.java:[467,33] getDefaultReplication() in org.apache.hadoop.fs.FileSystem has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/hadoop/io/AvroSequenceFile.java:[479,33] getDefaultBlockSize() in org.apache.hadoop.fs.FileSystem has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/hadoop/io/AvroSequenceFile.java:[548,7] Writer(org.apache.hadoop.fs.FileSystem,org.apache.hadoop.conf.Configuration,org.apache.hadoop.fs.Path,java.lang.Class,java.lang.Class,int,short,long,org.apache.hadoop.util.Progressable,org.apache.hadoop.io.SequenceFile.Metadata) in org.apache.hadoop.io.SequenceFile.Writer has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/hadoop/io/AvroSequenceFile.java:[724,7] Reader(org.apache.hadoop.fs.FileSystem,org.apache.hadoop.fs.Path,org.apache.hadoop.conf.Configuration) in org.apache.hadoop.io.SequenceFile.Reader has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/hadoop/io/AvroSequenceFile.java:[738,47] Reader(org.apache.hadoop.fs.FileSystem,org.apache.hadoop.fs.Path,org.apache.hadoop.conf.Configuration) in org.apache.hadoop.io.SequenceFile.Reader has been deprecated
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapreduce/AvroRecordReaderBase.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/main/java/org/apache/avro/mapreduce/AvroRecordReaderBase.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.3.0:add-test-source[m [1m(add-test-source)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Test Source directory: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/target/generated-test-sources/java added.
+[[1;34mINFO[m] Test Source directory: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/target/generated-test-sources/avro added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 5 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 33 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/target/test-classes
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/test/java/org/apache/avro/mapreduce/AvroFiles.java: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/test/java/org/apache/avro/mapreduce/AvroFiles.java uses unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/mapred/src/test/java/org/apache/avro/mapreduce/AvroFiles.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-mapred[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3782623703240
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.avro:trevni-avro[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Trevni Java Avro 1.12.0-SNAPSHOT                        [13/25][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-banned-dependencies)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 16 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/target/classes
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/src/main/java/org/apache/trevni/avro/AvroColumnReader.java: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/src/main/java/org/apache/trevni/avro/AvroColumnReader.java uses unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/src/main/java/org/apache/trevni/avro/AvroColumnReader.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type jar - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/avro/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mtrevni-avro[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3783350670067
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36morg.apache.avro:trevni-doc[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Trevni Specification 1.12.0-SNAPSHOT                    [14/25][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mtrevni-doc[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/doc/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mtrevni-doc[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mtrevni-doc[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/trevni/doc/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mtrevni-doc[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mtrevni-doc[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type pom - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36morg.apache.avro:avro-tools[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Tools 1.12.0-SNAPSHOT                       [15/25][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] The artifact org.slf4j:slf4j-log4j12:jar:1.7.36 has been relocated to org.slf4j:slf4j-reload4j:jar:1.7.36
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-banned-dependencies)[m @ [36mavro-tools[0;1m ---[m
+[[1;33mWARNING[m] The artifact org.slf4j:slf4j-log4j12:jar:1.7.36 has been relocated to org.slf4j:slf4j-reload4j:jar:1.7.36
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;33mWARNING[m] While downloading org.slf4j:slf4j-log4j12:1.7.36
+  This artifact has been relocated to org.slf4j:slf4j-reload4j:1.7.36.
+
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 6 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 32 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/target/classes
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/src/main/java/org/apache/avro/tool/TetherTool.java:[37,30] org.apache.commons.cli.OptionBuilder in org.apache.commons.cli has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/src/main/java/org/apache/avro/tool/TetherTool.java:[40,30] org.apache.commons.cli.GnuParser in org.apache.commons.cli has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/src/main/java/org/apache/avro/tool/Util.java:[193,11] isFile(org.apache.hadoop.fs.Path) in org.apache.hadoop.fs.FileSystem has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/src/main/java/org/apache/avro/tool/Util.java:[195,18] isDirectory(org.apache.hadoop.fs.Path) in org.apache.hadoop.fs.FileSystem has been deprecated
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/src/main/java/org/apache/avro/tool/CatTool.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/src/main/java/org/apache/avro/tool/CatTool.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-tools[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type jar - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/target/test-classes
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/src/test/java/org/apache/avro/tool/CatTool_run_test.java:[115,54] none() in org.junit.rules.ExpectedException has been deprecated
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3784099844200
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.avro.tool.[1mCatTool_run_test[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.029 s - in org.apache.avro.tool.[1mCatTool_run_test[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 6, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mpitest-maven:1.5.2:mutationCoverage[m [1m(pit-report)[m @ [36mavro-tools[0;1m ---[m
+[[1;34mINFO[m] Found plugin : Default csv report plugin
+[[1;34mINFO[m] Found plugin : Default xml report plugin
+[[1;34mINFO[m] Found plugin : Default html report plugin
+[[1;34mINFO[m] Found plugin : Static initializer code detector plugin
+[[1;34mINFO[m] Found plugin : Static initializer filter plugin
+[[1;34mINFO[m] Found plugin : Excluded annotations plugin
+[[1;34mINFO[m] Found plugin : Try with resources filter
+[[1;34mINFO[m] Found plugin : Inlined finally block filter plugin
+[[1;34mINFO[m] Found plugin : Implicit null check filter
+[[1;34mINFO[m] Found plugin : Method reference null check filter
+[[1;34mINFO[m] Found plugin : For each loop filter
+[[1;34mINFO[m] Found plugin : Enum constructor filter
+[[1;34mINFO[m] Found plugin : Logging calls filter
+[[1;34mINFO[m] Found plugin : Infinite for loop filter
+[[1;34mINFO[m] Found plugin : Long running iterator loop filter
+[[1;34mINFO[m] Found plugin : For loop counter filter
+[[1;34mINFO[m] Found plugin : Kotlin junk mutations filter
+[[1;34mINFO[m] Found plugin : Max mutations per class limit
+[[1;34mINFO[m] Found plugin : Equals shortcut equivalent mutant filter
+[[1;34mINFO[m] Found plugin : Trivial return vals equivalence filter
+[[1;34mINFO[m] Found plugin : Mutant export plugin
+[[1;34mINFO[m] Found shared classpath plugin : Default mutation engine
+[[1;34mINFO[m] Found shared classpath plugin : JUnit 5 test framework support
+[[1;34mINFO[m] Found shared classpath plugin : JUnit plugin
+[[1;34mINFO[m] Found shared classpath plugin : TestNG plugin
+[[1;34mINFO[m] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[[1;34mINFO[m] Adding org.pitest:pitest to SUT classpath
+[[1;34mINFO[m] Mutating from /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/target/classes
+/================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.BooleanTrueReturnValsMutator
+>> Generated 1 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.EmptyObjectReturnValsMutator
+>> Generated 2 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 12 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 12 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 24 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 24 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 13 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 13 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 21 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 21 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.PrimitiveReturnsMutator
+>> Generated 5 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : < 1 second
+--------------------------------------------------------------------------------
+> Total  : < 1 second
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Generated 78 mutations Killed 0 (0%)
+>> Ran 0 tests (0 tests per mutation)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.apache.avro:avro-protobuf[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Protobuf Compatibility 1.12.0-SNAPSHOT      [16/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 4 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/target/classes
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/main/java/org/apache/avro/protobuf/ProtobufData.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/main/java/org/apache/avro/protobuf/ProtobufData.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 7 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/target/test-classes
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/Foo.java:[146,100] valueOf(int) in org.apache.avro.protobuf.multiplefiles.A has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/Foo.java:[191,100] valueOf(int) in org.apache.avro.protobuf.multiplefiles.A has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/Foo.java:[208,102] valueOf(int) in org.apache.avro.protobuf.multiplefiles.A has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/Foo.java:[576,95] valueOf(int) in org.apache.avro.protobuf.multiplefiles.A has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/Foo.java:[658,97] valueOf(int) in org.apache.avro.protobuf.multiplefiles.A has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/Foo.java:[2217,97] valueOf(int) in org.apache.avro.protobuf.multiplefiles.A has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/noopt/Test.java:[3905,51] com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner in com.google.protobuf.Descriptors.FileDescriptor has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/noopt/Test.java:[3905,140] com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner in com.google.protobuf.Descriptors.FileDescriptor has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/noopt/Test.java:[3912,51] internalBuildGeneratedFileFrom(java.lang.String[],com.google.protobuf.Descriptors.FileDescriptor[],com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner) in com.google.protobuf.Descriptors.FileDescriptor has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/TestMultipleFiles.java:[44,51] com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner in com.google.protobuf.Descriptors.FileDescriptor has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/TestMultipleFiles.java:[44,140] com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner in com.google.protobuf.Descriptors.FileDescriptor has been deprecated
+[[1;33mWARNING[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/protobuf/src/test/java/org/apache/avro/protobuf/multiplefiles/TestMultipleFiles.java:[51,51] internalBuildGeneratedFileFrom(java.lang.String[],com.google.protobuf.Descriptors.FileDescriptor[],com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner) in com.google.protobuf.Descriptors.FileDescriptor has been deprecated
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-protobuf[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3786777329659
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.avro:avro-thrift[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Thrift Compatibility 1.12.0-SNAPSHOT        [17/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 3 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/target/classes
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/src/main/java/org/apache/avro/thrift/ThriftDatumReader.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/src/main/java/org/apache/avro/thrift/ThriftDatumReader.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 5 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/thrift/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-thrift[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3787071226030
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.apache.avro:avro-archetypes-parent[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Maven Archetypes 1.12.0-SNAPSHOT            [18/25][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-archetypes-parent[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/archetypes/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-archetypes-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-archetypes-parent[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/archetypes/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-archetypes-parent[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:copy-resources[m [1m(copy-pom-with-building-version)[m @ [36mavro-archetypes-parent[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/archetypes/src/main/pom
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-archetypes-parent[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type pom - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.apache.avro:avro-service-archetype[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Maven Service Archetype 1.12.0-SNAPSHOT     [19/25][m
+[[1;34mINFO[m] [1m--------------------------[ maven-archetype ]---------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-service-archetype[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/archetypes/avro-service-archetype/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-service-archetype[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-service-archetype[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/archetypes/avro-service-archetype/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-service-archetype[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:copy-resources[m [1m(copy-pom-with-building-version)[m @ [36mavro-service-archetype[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-service-archetype[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 7 resources
+[[1;34mINFO[m] Copying 1 resource to archetype-resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-service-archetype[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type maven-archetype - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-service-archetype[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/archetypes/avro-service-archetype/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36morg.apache.avro:avro-grpc[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro gRPC 1.12.0-SNAPSHOT                        [20/25][m
+[[1;34mINFO[m] [1m-------------------------------[ bundle ]-------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-banned-dependencies)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:schema[m [1m(schemas)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:protocol[m [1m(schemas)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:idl-protocol[m [1m(schemas)[m @ [36mavro-grpc[0;1m ---[m
+[[1;33mWARNING[m] Found documentation comment at line 19, column 1. Ignoring previous one at line 1, column 1: "Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/src/main/velocity
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 7 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/target/classes
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/src/main/java/org/apache/avro/grpc/AvroResponseMarshaller.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/src/main/java/org/apache/avro/grpc/AvroResponseMarshaller.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] Writing manifest: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/target/classes/META-INF/MANIFEST.MF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 5 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/grpc/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-grpc[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3787742049311
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.apache.avro:avro-integration-test[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding Avro Integration Tests 1.12.0-SNAPSHOT                  [21/25][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-integration-test[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-integration-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-integration-test[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-integration-test[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-integration-test[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type pom - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36morg.apache.avro:avro-test-custom-conversions[0;1m >------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Codegen Test dependencies 1.12.0-SNAPSHOT   [22/25][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/test-custom-conversions/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/test-custom-conversions/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/test-custom-conversions/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 9 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/test-custom-conversions/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type jar - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/test-custom-conversions/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-test-custom-conversions[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3787940265396
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36morg.apache.avro:avro-codegen-test[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Codegen Test 1.12.0-SNAPSHOT                [23/25][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/codegen-test/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/codegen-test/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/codegen-test/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type jar - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:schema[m [1m(default)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:protocol[m [1m(default)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.12.0-SNAPSHOT:idl-protocol[m [1m(default)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.3.0:add-test-source[m [1m(add-test-source)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] Test Source directory: /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/codegen-test/target/generated-test-sources/java added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 13 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 21 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/integration-test/codegen-test/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-codegen-test[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3788846467545
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36morg.apache.avro:avro-perf[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Avro Performance Test Suite 1.12.0-SNAPSHOT      [24/25][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/perf/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/perf/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/perf/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 40 source files to /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/perf/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mavro-perf[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type jar - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/perf/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mavro-perf[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3790137076557
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.apache.avro:jacoco-reports[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding jacoco-reports 1.12.0-SNAPSHOT                          [25/25][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/jacoco-reports/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/matteo/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/jacoco-reports/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.7.0:process[m [1m(process-resource-bundles)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[[1;34mINFO[m] Copying 3 resources from 1 bundle.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/jacoco-reports/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:5.1.4:manifest[m [1m(bundle-manifest)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;33mWARNING[m] Ignoring project type jar - supportedProjectTypes = [bundle]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/jacoco-reports/src/test/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M6:test[m [1m(default-test)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] Tests will run in random order. To reproduce ordering use flag -Dsurefire.runOrder.random.seed=3790292458277
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:report-aggregate[m [1m(default)[m @ [36mjacoco-reports[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/avro/target/jacoco.exec
+[[1;34mINFO[m] Loading execution data file /home/matteo/Documenti/Workspaces/Avro_fork/avro/lang/java/tools/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'avro' with 343 classes
+[[1;34mINFO[m] Analyzed bundle 'avro-tools' with 34 classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for Apache Avro Toplevel 1.12.0-SNAPSHOT:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Apache Avro Toplevel ............................... [1;32mSUCCESS[m [  0.365 s]
+[[1;34mINFO[m] Apache Avro Java ................................... [1;32mSUCCESS[m [  0.302 s]
+[[1;34mINFO[m] Apache Avro ........................................ [1;32mSUCCESS[m [ 10.649 s]
+[[1;34mINFO[m] Apache Avro Android Compatibility .................. [1;32mSUCCESS[m [  0.088 s]
+[[1;34mINFO[m] Apache Avro Compiler ............................... [1;32mSUCCESS[m [  1.722 s]
+[[1;34mINFO[m] Apache Avro Maven Plugin ........................... [1;32mSUCCESS[m [  1.514 s]
+[[1;34mINFO[m] Apache Avro IPC .................................... [1;32mSUCCESS[m [  2.098 s]
+[[1;34mINFO[m] Apache Avro IPC Jetty .............................. [1;32mSUCCESS[m [  0.263 s]
+[[1;34mINFO[m] Apache Avro IPC Netty .............................. [1;32mSUCCESS[m [  0.229 s]
+[[1;34mINFO[m] Trevni Java ........................................ [1;32mSUCCESS[m [  0.017 s]
+[[1;34mINFO[m] Trevni Java Core ................................... [1;32mSUCCESS[m [  0.112 s]
+[[1;34mINFO[m] Apache Avro Mapred API ............................. [1;32mSUCCESS[m [  1.681 s]
+[[1;34mINFO[m] Trevni Java Avro ................................... [1;32mSUCCESS[m [  0.469 s]
+[[1;34mINFO[m] Trevni Specification ............................... [1;32mSUCCESS[m [  0.017 s]
+[[1;34mINFO[m] Apache Avro Tools .................................. [1;32mSUCCESS[m [  3.018 s]
+[[1;34mINFO[m] Apache Avro Protobuf Compatibility ................. [1;32mSUCCESS[m [  0.471 s]
+[[1;34mINFO[m] Apache Avro Thrift Compatibility ................... [1;32mSUCCESS[m [  0.215 s]
+[[1;34mINFO[m] Apache Avro Maven Archetypes ....................... [1;32mSUCCESS[m [  0.291 s]
+[[1;34mINFO[m] Apache Avro Maven Service Archetype ................ [1;32mSUCCESS[m [  0.044 s]
+[[1;34mINFO[m] Apache Avro gRPC ................................... [1;32mSUCCESS[m [  0.446 s]
+[[1;34mINFO[m] Avro Integration Tests ............................. [1;32mSUCCESS[m [  0.013 s]
+[[1;34mINFO[m] Apache Avro Codegen Test dependencies .............. [1;32mSUCCESS[m [  0.075 s]
+[[1;34mINFO[m] Apache Avro Codegen Test ........................... [1;32mSUCCESS[m [  0.907 s]
+[[1;34mINFO[m] Apache Avro Performance Test Suite ................. [1;32mSUCCESS[m [  1.289 s]
+[[1;34mINFO[m] jacoco-reports ..................................... [1;32mSUCCESS[m [  0.678 s]
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  27.774 s
+[[1;34mINFO[m] Finished at: 2022-06-24T12:45:08+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

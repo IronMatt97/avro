@@ -33,7 +33,6 @@
   <url>https://avro.apache.org</url>
   <description>Avro core components</description>
   <packaging>bundle</packaging>
-
   <properties>
     <main.basedir>${project.parent.parent.basedir}</main.basedir>
     <osgi.import>
@@ -229,16 +228,9 @@
                 <param>org.apache.avro.generic.GenericData</param>
               </targetClasses>
               <targetTests>
-                <param>org.apache.avro.io.parsing.generate_test</param>
-                <param>org.apache.avro.io.parsing.generate2_test</param>
-                <param>org.apache.avro.generic.getDefaultValue_test</param>
+                <param>org.apache.avro.io.parsing.ValidatingGrammarGeneratorGenerateTest</param>
+                <param>org.apache.avro.generic.GenericDataGetDefaultValueTest</param>
               </targetTests>
-              <avoidCallsTo>
-                <avoidCallsTo>java.util.logging</avoidCallsTo>
-                <avoidCallsTo>org.apache.log4j</avoidCallsTo>
-                <avoidCallsTo>org.slf4j</avoidCallsTo>
-                <avoidCallsTo>org.apache.commons.logging</avoidCallsTo>
-              </avoidCallsTo>
             </configuration>
             <executions>
               <execution>
@@ -260,6 +252,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M6</version>
             <executions>
               <execution>
                 <goals>
@@ -269,7 +262,7 @@
             </executions>
             <configuration>
                 <argLine>
-                    -javaagent:/home/matteo/Programmi/Ba-Dua/ba-dua-agent-rt-0.7.0-all.jar
+                    -javaagent:/home/matteo/Programmi/Ba-Dua/ba-dua-agent-rt-0.6.0-all.jar
                 </argLine>
             </configuration>
           </plugin>
@@ -279,6 +272,11 @@
   </profiles>
 
   <dependencies>
+  <dependency>
+       <groupId>org.junit.jupiter</groupId>
+       <artifactId>junit-jupiter-api</artifactId>
+       <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
