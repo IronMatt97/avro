@@ -16,55 +16,32 @@ cache:
 matrix:
   include:
   - name: Java
-    #addons:
-    #    sonarcloud:
-    #        organization: "ironmatt97"
-    #        token:
-    #            secure: "lJplrPXNINPeLq/sHDMj8yfcTwHU2YsqcMZeL3H/NNNGfG4/gCYyDDt6WPS4L798DcxZm6ktixUPSqnHs+L4r37ARENNNxLRD0pb4OD+VrDzyhbhSVTWFW7ZxfWg9qpf308FJ3nvtI8MSxsv50BfU0mgG6i2C9RpQ+dJUuTUaJOirOuNXyQ4m9SxaJYBmOcnZCfV3yuIAulps7djdsCR3CJQK9dIFFjWuv/sd8/L89iffIE4i0zpw/AqvPjv+/MsRyZolA05fuOqDrtCv5JV3DQBw17Fb8CIbfF1m1GhfR+vr+nw0gXWzyyfnOC/VYdBsy8LbGPp0ydtTTQ/h+jebNH01Owlc9q7hXi/UCGon9VJhPp8a3mRyNj0ecEToIcC6V1oZmiw+1By7zJ9Ou1QPpyeHdL/nP/aSRDtbyWc0SqqehXhPlB+Lwlf/g8mcMnDhI8HSgSdvpbAeCyYaGT+9EkQi1c0/S9rwfWiRem7DXfu0xGDsrnnu1qczfKz15M+PxXKc/SdQqTaZ1xzE16iI+Nm1cHV655HedqDAV9D03w9EGDJDPKGh76KQAT/GBTULnpf0/XHjf+yjovEDWWYIgt9stNFihd1UwAyD18iYaN+E/HDdYAaDsPcCaMCm+oHboMhiDwtZGfW+EkoNHB3dtCojOKzx/G+mOySaiPkKiI="
-    #    apt:
-    #        update: true
-    #        packages:
-    #        - openjdk-11-jdk
-    #        - wget
-    #install:
-    #- export MAVEN_VERSION="3.8.3"
-    #- wget https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
-    #- tar zxvf apache-maven-$MAVEN_VERSION-bin.tar.gz
-    #- export M2_HOME=$PWD/apache-maven-$MAVEN_VERSION
-    #- export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-arm64"
-    #- export PATH="$M2_HOME/bin:$JAVA_HOME/bin:$PATH"
-    #before_script:
-    #- java -version
-    #- mvn -version
-    #script:
-    #- cd lang/java
+    addons:
+        sonarcloud:
+            organization: "ironmatt97"
+            token:
+                secure: "lJplrPXNINPeLq/sHDMj8yfcTwHU2YsqcMZeL3H/NNNGfG4/gCYyDDt6WPS4L798DcxZm6ktixUPSqnHs+L4r37ARENNNxLRD0pb4OD+VrDzyhbhSVTWFW7ZxfWg9qpf308FJ3nvtI8MSxsv50BfU0mgG6i2C9RpQ+dJUuTUaJOirOuNXyQ4m9SxaJYBmOcnZCfV3yuIAulps7djdsCR3CJQK9dIFFjWuv/sd8/L89iffIE4i0zpw/AqvPjv+/MsRyZolA05fuOqDrtCv5JV3DQBw17Fb8CIbfF1m1GhfR+vr+nw0gXWzyyfnOC/VYdBsy8LbGPp0ydtTTQ/h+jebNH01Owlc9q7hXi/UCGon9VJhPp8a3mRyNj0ecEToIcC6V1oZmiw+1By7zJ9Ou1QPpyeHdL/nP/aSRDtbyWc0SqqehXhPlB+Lwlf/g8mcMnDhI8HSgSdvpbAeCyYaGT+9EkQi1c0/S9rwfWiRem7DXfu0xGDsrnnu1qczfKz15M+PxXKc/SdQqTaZ1xzE16iI+Nm1cHV655HedqDAV9D03w9EGDJDPKGh76KQAT/GBTULnpf0/XHjf+yjovEDWWYIgt9stNFihd1UwAyD18iYaN+E/HDdYAaDsPcCaMCm+oHboMhiDwtZGfW+EkoNHB3dtCojOKzx/G+mOySaiPkKiI="
+        apt:
+            update: true
+            packages:
+            - openjdk-11-jdk
+            - wget
+            - maven
+    install:
+    - export MAVEN_VERSION="3.8.3"
+    - wget https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
+    - tar zxvf apache-maven-$MAVEN_VERSION-bin.tar.gz
+    - export M2_HOME=$PWD/apache-maven-$MAVEN_VERSION
+    - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-arm64"
+    - export PATH="$M2_HOME/bin:$JAVA_HOME/bin:$PATH"
+    before_script:
+    - java -version
+    - mvn -version
+    script:
+    - cd lang/java
     #- "./build.sh clean test"
-    # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-    #- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=IronMatt97_avro
-    language: java
-jdk:
-  - openjdk11
-before_install:
-  - pip install --user codecov
-after_success:
-  - codecov
-branches:
-  except:
-    - appveyor
-
-cache:
-  directories:
-  - $HOME/.m2
-  
-addons:
-  sonarcloud:
-    organization: "ironmatt97"
-    token:
-      secure: "lJplrPXNINPeLq/sHDMj8yfcTwHU2YsqcMZeL3H/NNNGfG4/gCYyDDt6WPS4L798DcxZm6ktixUPSqnHs+L4r37ARENNNxLRD0pb4OD+VrDzyhbhSVTWFW7ZxfWg9qpf308FJ3nvtI8MSxsv50BfU0mgG6i2C9RpQ+dJUuTUaJOirOuNXyQ4m9SxaJYBmOcnZCfV3yuIAulps7djdsCR3CJQK9dIFFjWuv/sd8/L89iffIE4i0zpw/AqvPjv+/MsRyZolA05fuOqDrtCv5JV3DQBw17Fb8CIbfF1m1GhfR+vr+nw0gXWzyyfnOC/VYdBsy8LbGPp0ydtTTQ/h+jebNH01Owlc9q7hXi/UCGon9VJhPp8a3mRyNj0ecEToIcC6V1oZmiw+1By7zJ9Ou1QPpyeHdL/nP/aSRDtbyWc0SqqehXhPlB+Lwlf/g8mcMnDhI8HSgSdvpbAeCyYaGT+9EkQi1c0/S9rwfWiRem7DXfu0xGDsrnnu1qczfKz15M+PxXKc/SdQqTaZ1xzE16iI+Nm1cHV655HedqDAV9D03w9EGDJDPKGh76KQAT/GBTULnpf0/XHjf+yjovEDWWYIgt9stNFihd1UwAyD18iYaN+E/HDdYAaDsPcCaMCm+oHboMhiDwtZGfW+EkoNHB3dtCojOKzx/G+mOySaiPkKiI="
-
-script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=IronMatt97_avro
+    #the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=IronMatt97_avro
   - name: C
     language: c
     addons:
