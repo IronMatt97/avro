@@ -9,6 +9,7 @@ import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.mockito.Mockito;
 
 import java.util.*;
 
@@ -30,22 +31,54 @@ public class ValidatingGrammarGeneratorGenerateTest {
     Collection<TestInput> inputs = new ArrayList<>();
     Collection<TestInput[]> result = new ArrayList<>();
     Schema sc;
+    Schema mockSchema;
     Map<ValidatingGrammarGenerator.LitS, Symbol> seen;
-
-    //Schema mock = Mockito.mock(Schema.class);
-    //Mockito.when(mock.getName()).thenReturn("nullTestType");
 
     /*
     Test 1/8 -> casi semplici di ritorno simbolo
     */
-    inputs.add(new TestInput(Schema.create(Schema.Type.NULL),null,Symbol.NULL));
-    inputs.add(new TestInput(Schema.create(Schema.Type.BOOLEAN),null,Symbol.BOOLEAN));
-    inputs.add(new TestInput(Schema.create(Schema.Type.INT),null,Symbol.INT));
-    inputs.add(new TestInput(Schema.create(Schema.Type.LONG),null,Symbol.LONG));
-    inputs.add(new TestInput(Schema.create(Schema.Type.FLOAT),null,Symbol.FLOAT));
-    inputs.add(new TestInput(Schema.create(Schema.Type.DOUBLE),null,Symbol.DOUBLE));
-    inputs.add(new TestInput(Schema.create(Schema.Type.STRING),null,Symbol.STRING));
-    inputs.add(new TestInput(Schema.create(Schema.Type.BYTES),null,Symbol.BYTES));
+
+    //sc = Schema.create(Schema.Type.NULL);
+
+    mockSchema = Mockito.mock(Schema.class);
+    Mockito.when(mockSchema.getName()).thenReturn("mocked_schema");
+    Mockito.when(mockSchema.getType()).thenReturn(Schema.Type.NULL);
+    inputs.add(new TestInput(mockSchema,null,Symbol.NULL));
+
+    mockSchema = Mockito.mock(Schema.class);
+    Mockito.when(mockSchema.getName()).thenReturn("mocked_schema");
+    Mockito.when(mockSchema.getType()).thenReturn(Schema.Type.BOOLEAN);
+    inputs.add(new TestInput(mockSchema,null,Symbol.BOOLEAN));
+
+    mockSchema = Mockito.mock(Schema.class);
+    Mockito.when(mockSchema.getName()).thenReturn("mocked_schema");
+    Mockito.when(mockSchema.getType()).thenReturn(Schema.Type.INT);
+    inputs.add(new TestInput(mockSchema,null,Symbol.INT));
+
+    mockSchema = Mockito.mock(Schema.class);
+    Mockito.when(mockSchema.getName()).thenReturn("mocked_schema");
+    Mockito.when(mockSchema.getType()).thenReturn(Schema.Type.LONG);
+    inputs.add(new TestInput(mockSchema,null,Symbol.LONG));
+
+    mockSchema = Mockito.mock(Schema.class);
+    Mockito.when(mockSchema.getName()).thenReturn("mocked_schema");
+    Mockito.when(mockSchema.getType()).thenReturn(Schema.Type.FLOAT);
+    inputs.add(new TestInput(mockSchema,null,Symbol.FLOAT));
+
+    mockSchema = Mockito.mock(Schema.class);
+    Mockito.when(mockSchema.getName()).thenReturn("mocked_schema");
+    Mockito.when(mockSchema.getType()).thenReturn(Schema.Type.DOUBLE);
+    inputs.add(new TestInput(mockSchema,null,Symbol.DOUBLE));
+
+    mockSchema = Mockito.mock(Schema.class);
+    Mockito.when(mockSchema.getName()).thenReturn("mocked_schema");
+    Mockito.when(mockSchema.getType()).thenReturn(Schema.Type.STRING);
+    inputs.add(new TestInput(mockSchema,null,Symbol.STRING));
+
+    mockSchema = Mockito.mock(Schema.class);
+    Mockito.when(mockSchema.getName()).thenReturn("mocked_schema");
+    Mockito.when(mockSchema.getType()).thenReturn(Schema.Type.BYTES);
+    inputs.add(new TestInput(mockSchema,null,Symbol.BYTES));
 
     /*
     Test 9/13 -> casi di FIXED, ENUM, ARRAY, MAP e UNION
