@@ -26,13 +26,12 @@ matrix:
             packages:
             - openjdk-11-jdk
             - wget
-            - maven
     install:
     - export MAVEN_VERSION="3.8.3"
     - wget https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
     - tar zxvf apache-maven-$MAVEN_VERSION-bin.tar.gz
     - export M2_HOME=$PWD/apache-maven-$MAVEN_VERSION
-    - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-arm64"
+    - export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-arm64"
     - export PATH="$M2_HOME/bin:$JAVA_HOME/bin:$PATH"
     before_script:
     - java -version
