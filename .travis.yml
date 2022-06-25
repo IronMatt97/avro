@@ -24,7 +24,7 @@ matrix:
         apt:
             update: true
             packages:
-            - openjdk-8-jdk
+            - openjdk-11-jdk
             - wget
     install:
     - export MAVEN_VERSION="3.8.3"
