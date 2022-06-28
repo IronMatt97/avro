@@ -41,12 +41,12 @@ public class GenericDataGetDefaultValueTest {
     inputs.add(new TestInput(f,1));
 
     /*
-    Test 2 -> Field non valido (Branch 1205)
+    Test 2 -> Field non valido (Branch 1204)
      */
     inputs.add(new TestInput(new Field("INT",Schema.create(Schema.Type.INT)),0));
 
     /*
-    Test 3 -> Field di tipo nullo (Branch 1207)
+    Test 3 -> Field di tipo nullo (Branch 1206)
      */
     sc = SchemaBuilder.record("test").namespace("ns").fields().
       name("test").type().nullType().nullDefault().
@@ -55,13 +55,18 @@ public class GenericDataGetDefaultValueTest {
     inputs.add(new TestInput(f,null));
 
     /*
-    Test 4 -> Field di tipo union con campo nullo (Branch 1208)
+    Test 4 -> Field di tipo union con campo nullo (Branch 1207)
      */
     sc = SchemaBuilder.record("test").namespace("ns").fields().
       name("test").type().unionOf().nullType().endUnion().nullDefault().
       endRecord();
     f = sc.getField("test");
     inputs.add(new TestInput(f,null));
+
+    /*
+    Test 5 -> Field nullo
+     */
+    inputs.add(new TestInput(null,null));
 
 
     for (TestInput e : inputs) {
@@ -80,6 +85,8 @@ public class GenericDataGetDefaultValueTest {
   @Test
   public void testGetDefaultValue() {
 
+    if (field == null)
+      thrown.expect(NullPointerException.class);
     if (field.pos() == -1)
       thrown.expect(AvroMissingFieldException.class);
     Object o = new GenericData().getDefaultValue(field);

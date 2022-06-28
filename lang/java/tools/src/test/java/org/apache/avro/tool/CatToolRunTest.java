@@ -101,6 +101,18 @@ public class CatToolRunTest {
     args.add("2");
     inputs.add(new TestInput(System.in, System.out, System.err, args,1));
 
+    /*
+    Test 7 -> Esecuzione con codec nullo
+      */
+    args = new ArrayList<>();
+    args.add("tmpN.avro");
+    args.add("tmp2.avro");
+    inputs.add(new TestInput(System.in, System.out, System.err, args,0));
+    /*
+    Test 8 -> input nullo
+      */
+    inputs.add(new TestInput(System.in, System.out, System.err, null,null));
+
 
 
     for (TestInput e : inputs) {
@@ -122,6 +134,7 @@ public class CatToolRunTest {
     if (!Files.exists(Paths.get("tmp.avro"))) {
       File tmp = new File("tmp.avro");
       tmp.createNewFile();
+
       //Schema schema = new Schema.Parser().parse("{\"type\":\"record\", " + "\"name\":\"myRecord\", "
         //+ "\"fields\":[ " + "{\"name\":\"value\",\"type\":\"int\"} " + "]}");
       Schema schema;
@@ -130,6 +143,25 @@ public class CatToolRunTest {
       writer.setMeta("METADATA_KEY", "METADATA_VALUE");
       writer.setCodec(CodecFactory.snappyCodec());
       writer.create(schema, tmp);
+      for (int i = 0; i < 10; i++) {
+        GenericRecord record = new GenericData.Record(schema);
+        record.put("value", i);
+        writer.append(record);
+      }
+      writer.close();
+    }
+    if (!Files.exists(Paths.get("tmpN.avro"))) {
+      File tmpN = new File("tmpN.avro");
+      tmpN.createNewFile();
+
+      //Schema schema = new Schema.Parser().parse("{\"type\":\"record\", " + "\"name\":\"myRecord\", "
+      //+ "\"fields\":[ " + "{\"name\":\"value\",\"type\":\"int\"} " + "]}");
+      Schema schema;
+      schema = SchemaBuilder.record("myRecord").fields().name("value").type().intType().noDefault().endRecord();
+      DataFileWriter<Object> writer = new DataFileWriter<>(new GenericDatumWriter<>(schema));
+      writer.setMeta("METADATA_KEY", "METADATA_VALUE");
+      writer.setCodec(CodecFactory.snappyCodec());
+      writer.create(schema, tmpN);
       for (int i = 0; i < 10; i++) {
         GenericRecord record = new GenericData.Record(schema);
         record.put("value", i);
@@ -146,6 +178,10 @@ public class CatToolRunTest {
       File tmp = new File("tmp.avro");
       tmp.delete();
     }
+    if (Files.exists(Paths.get("tmpN.avro"))) {
+      File tmp = new File("tmpN.avro");
+      tmp.delete();
+    }
     if (Files.exists(Paths.get("tmp2.avro"))) {
       File tmp = new File("tmp2.avro");
       tmp.delete();
@@ -158,6 +194,9 @@ public class CatToolRunTest {
 
   @Test
   public void testRun() throws Exception {
+    if(args == null)
+      thrown.expect(NullPointerException.class);
+
     int res = new CatTool().run(in,out,err,args);
 
     Assert.assertEquals(expectedParam, res);
